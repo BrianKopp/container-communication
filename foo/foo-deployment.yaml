@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foo-deployment
+  namespace: container-communication
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: foo
+  template:
+    metadata:
+      labels:
+        app: foo
+    spec:
+      containers:
+      - name: foo
+        image: briankopp/container-communication-foo:1.0.0
+        ports:
+        - containerPort: 3000
+        env:
+        - name: BAR_URL
