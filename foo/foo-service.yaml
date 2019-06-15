@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: foo-service
+  namespace: container-communication
+  labels:
+    service: foo
+spec:
+  ports:
+  - port: 3000
+    protocol: TCP
+  selector:
+    app: foo
+  type: NodePort
