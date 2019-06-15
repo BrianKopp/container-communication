@@ -11,4 +11,3 @@ spec:
     protocol: TCP
   selector:
     app: bar
-  type: NodePort
