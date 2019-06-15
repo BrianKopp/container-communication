@@ -1,3 +1,4 @@
 const app = require('./app');
 
-app.listen(3000, () => console.log('express app listening on port 3000'));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log('express app listening on port 3000'));
