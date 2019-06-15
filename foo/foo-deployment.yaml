@@ -20,3 +20,4 @@ spec:
         - containerPort: 3000
         env:
         - name: BAR_URL
+          value: http://bar-service.container-communication.svc.cluster.local:3000
