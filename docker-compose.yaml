@@ -1,0 +1,12 @@
+version: '3'
+services:
+  bar:
+    image: "briankopp/container-communication-bar:1.0.0"
+    ports:
+    - "3000:3000"
+  foo:
+    image: "briankopp/container-communication-foo:1.0.0"
+    ports:
+    - "3001:3000"
+    environment:
+    - BAR_URL=http://bar:3000
