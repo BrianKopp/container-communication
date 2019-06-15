@@ -11,7 +11,7 @@ app.get('/', (fooRequest, fooResponse) => {
         } else {
             console.log('successfully received BAR response');
             fooResponse.status(barResponse.statusCode);
-            fooResponse.send(barBody);
+            fooResponse.send(barBody + ' from inside FOO');
         }
     });
 });
